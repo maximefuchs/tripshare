@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_log"
+    android:backgroundTintMode="multiply"
+    android:backgroundTint="#555"
+    android:orientation="vertical"
+    tools:context="com.example.maxime.tripshare.LoginActivity"
+    android:padding="15dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/usN"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/mainicon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:id="@+id/usN"
+        android:padding="5dp"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/user_w"
+            android:layout_margin="5dp"
+            android:alpha="0.7"
+            android:layout_gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/Username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:textColor="#FFF"
+            android:textColorHint="#BBB"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:backgroundTint="#CCC"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:id="@+id/pasw"
+        android:layout_below="@id/usN"
+        android:padding="5dp"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/pass_w"
+            android:layout_margin="5dp"
+            android:alpha="0.7"
+            android:layout_gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textColor="#FFF"
+            android:textColorHint="#BBB"
+            android:layout_margin="5dp"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:padding="10dp"
+            android:backgroundTint="#CCC"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/loginBuffer"
+        android:visibility="gone"
+        android:layout_below="@+id/pasw"
+        android:layout_alignRight="@+id/pasw"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp">
+
+        <Button
+            android:id="@+id/BtnLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/positive_button"
+            android:text="Login"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:layout_margin="10dp"
+            android:textColor="#FFF" />
+
+        <Button
+            android:id="@+id/BtnNewUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/negative_button"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:text="SIGN UP"
+            android:layout_margin="10dp"
+            android:textColor="#FFF" />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

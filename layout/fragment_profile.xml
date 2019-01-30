@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_profile"
+    android:backgroundTintMode="multiply"
+    android:backgroundTint="#555"
+    tools:context="com.example.maxime.tripshare.pageProfile.ProfileFragment">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="100dp"
+        android:id="@+id/cardView"
+        android:layout_margin="50dp"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/profilePic"
+            android:scaleType="centerCrop"/>
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/cardView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/llName">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maxime"
+            android:textSize="25dp"
+            android:textColor="#FFF"
+            android:id="@+id/tvPrenom"
+            android:layout_margin="5dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fuchs"
+            android:textSize="25dp"
+            android:textColor="#FFF"
+            android:id="@+id/tvNom"
+            android:layout_below="@+id/cardView"
+            android:layout_margin="5dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView"
+        android:layout_below="@+id/llName"
+        android:layout_marginTop="20dp">
+    </android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOG OUT"
+        android:textSize="20dp"
+        android:textColor="#FFF"
+        android:padding="15dp"
+        android:layout_alignParentBottom="true"
+        android:background="#222"
+        android:layout_margin="15dp"
+        android:id="@+id/btnLogOut"/>
+
+
+</RelativeLayout>

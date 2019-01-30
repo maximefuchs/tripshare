@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlTemplate"
+    android:background="@color/transparent">
+
+
+    <ProgressBar
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignRight="@+id/llTrip"
+        android:layout_alignTop="@+id/llTrip"
+        android:layout_margin="10dp"
+        android:id="@+id/tripBuffer"
+        android:elevation="11dp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignRight="@+id/llTrip"
+        android:layout_alignBottom="@+id/llTrip"
+        android:layout_margin="10dp"
+        android:elevation="11dp"
+        android:id="@+id/llCreator"
+        android:visibility="gone">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="20dp"
+            android:id="@+id/cardView">
+            <ImageView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/profilePic"
+                android:background="#BBB"
+                android:scaleType="centerCrop"/>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maxime"
+            android:textColor="#FFF"
+            android:textSize="8dp"
+            android:layout_gravity="center"
+            android:id="@+id/creatorName"/>
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/share"
+        android:elevation="11dp"
+        android:layout_alignBottom="@+id/llTrip"
+        android:layout_alignRight="@+id/llTrip"
+        android:background="@color/transparent"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:id="@+id/ibShare"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:elevation="11dp"
+        android:background="@color/transparent"
+        android:layout_above="@+id/ibShare"
+        android:layout_alignRight="@+id/ibShare"
+        android:id="@+id/ibDelete"
+        android:clickable="true"
+        android:src="@drawable/dustbin"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/llTrip"
+        android:layout_alignLeft="@+id/llTrip"
+        android:orientation="vertical"
+        android:elevation="11dp"
+        android:visibility="gone"
+        android:id="@+id/llSocial">
+<!--
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like"
+            android:id="@+id/ibLike"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dislike"
+            android:id="@+id/ibDislike"/>
+-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/favorite"
+            android:layout_margin="10dp"
+            android:id="@+id/ivFavourite"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/background_homepage"
+        android:elevation="10dp"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:id="@+id/llTrip"
+        android:backgroundTint="#5000"
+        android:backgroundTintMode="src_atop">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llDates"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDate"
+                android:textColor="#FFF"
+                android:textSize="15dp"
+                android:text="11/01/2016"
+                android:layout_marginRight="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvEndDate"
+                android:textColor="#FFF"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"
+                android:text="11/25/2016"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/llDates"
+            android:layout_marginBottom="5dp">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="#FFF"
+                        android:textSize="30dp"
+                        android:id="@+id/tvCity"
+                        android:text="Paris"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/tvCity"
+                        android:textColor="#FFF"
+                        android:textSize="15dp"
+                        android:id="@+id/tvCountry"
+                        android:text="France"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rlEnd"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="#FFF"
+                        android:textSize="30dp"
+                        android:id="@+id/tvEndCity"
+                        android:text="Paris"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/tvEndCity"
+                        android:textColor="#FFF"
+                        android:textSize="15dp"
+                        android:id="@+id/tvEndCountry"
+                        android:text="France"/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

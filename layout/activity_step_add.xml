@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.maxime.tripshare.pageSteps.StepAddActivity"
+    android:background="@drawable/background_homepage"
+    android:backgroundTintMode="screen"
+    android:backgroundTint="#777">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:src="@drawable/namestep"
+                android:layout_margin="5dp"
+                android:layout_gravity="center_vertical"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etName"
+                android:hint="Name"
+                android:textSize="20dp"
+                android:textColorHint="#555"
+                android:textColor="#000"
+                android:background="@color/transparent"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/calendar"
+                android:id="@+id/ivCalendar"
+                android:clickable="true"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentTop="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDate"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:layout_toRightOf="@+id/ivCalendar"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:hint="Date"
+                android:textColorHint="#555"/>
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:src="@drawable/camera"
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:id="@+id/cameraBtn"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:isScrollContainer="false">
+
+
+            <org.osmdroid.views.MapView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/mapviewAdd">
+            </org.osmdroid.views.MapView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:gravity="right">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Use current location"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20dp"
+                    android:textColor="#000"/>
+
+                <ProgressBar
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/mapBuffer"/>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gps2"
+                    android:background="@color/transparent"
+                    android:id="@+id/ibAskPos"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnAdd"
+                android:text="Add Step"
+                android:background="@drawable/positive_button"
+                android:textColor="#FFF"
+                android:layout_marginBottom="10dp"/>
+
+            <ProgressBar
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/bufferAddStep"
+                android:visibility="gone"
+                android:layout_gravity="right"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

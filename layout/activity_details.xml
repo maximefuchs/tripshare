@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.maxime.tripshare.pageDetails.DetailsActivity"
+    android:background="@drawable/background_log"
+    android:backgroundTintMode="multiply"
+    android:backgroundTint="#555"
+    android:id="@+id/RL">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailsBuffer"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STEPNAME"
+                android:textSize="30dp"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:textColor="#FFF"
+                android:id="@+id/stepName"
+                android:gravity="center"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textSize="25dp"
+                android:textColor="#FFF"
+                android:layout_margin="10dp"
+                android:id="@+id/stepNumber"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/LL">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/tvStory"
+                android:clickable="true"
+                android:layout_margin="20dp"
+                android:textColor="#FFF"
+                android:text="Story of this step"
+                android:padding="10dp"/>
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/gvDetails"
+                android:numColumns="2"
+                android:padding="10dp"></GridView>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cameradetail"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50sp"
+        android:layout_marginRight="50sp"
+        android:id="@+id/btnAdd"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:id="@+id/container"
+        android:visibility="gone">
+
+    </FrameLayout>
+
+</RelativeLayout>
